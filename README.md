@@ -53,7 +53,7 @@ dbt build --profiles-dir .
 dbt test --profiles-dir .
 ```
 
-![Результат тестов](done.png)
+![Результат тестов](dbt/screenshots/done.png)
 
 ## Документация
 
@@ -66,7 +66,7 @@ python -m http.server 8081 --bind 127.0.0.1 --directory target
 
 Документация доступна по адресу http://127.0.0.1:8081.
 
-![Граф зависимостей](image.png)
+![Граф зависимостей](dbt/screenshots/image.png)
 
 ## Версии
 
