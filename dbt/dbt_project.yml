@@ -1,0 +1,19 @@
+name: fraud_analytics
+version: '1.0.0'
+config-version: 2
+profile: fraud_analytics
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+clean-targets:
+  - target
+  - dbt_packages
+
+models:
+  fraud_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
