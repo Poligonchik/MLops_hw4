@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: hw2
+    description: "Исходные данные"
+    tables:
+      - name: transactions
+        description: "Транзакции с отметкой о мошенничестве"

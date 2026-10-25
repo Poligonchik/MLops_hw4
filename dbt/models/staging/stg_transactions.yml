@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Подготовленные транзакции"
+
+    columns:
+      - name: row_id
+        description: "Идентификатор"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: transaction_time
+        description: "Дата и время транзакции"
+        data_tests:
+          - not_null
+
+      - name: t_date
+        description: "Дата транзакции"
+        data_tests:
+          - not_null
+
+      - name: t_hour
+        description: "Час транзакции от 0 до 23"
+
+      - name: day_of_week
+        description: "День недели транзакции от 1 (понедельник) до 7 (воскресенье)"
+
+      - name: merch
+        description: "Название мерчанта"
+
+      - name: cat_id
+        description: "Категория"
+
+      - name: amount
+        description: "Сумма транзакции"
+        data_tests:
+          - not_null
+
+      - name: amount_bucket
+        description: "SMALL (сумма < 50), MEDIUM (сумма от 50 до 200), LARGE (сумма больше 200)"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['SMALL', 'MEDIUM', 'LARGE']
+
+      - name: name_1
+        description: "Имя"
+
+      - name: name_2
+        description: "Фамилия"
+
+      - name: gender
+        description: "Пол"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['M', 'F']
+
+      - name: us_state
+        description: "Код штата"
+        data_tests:
+          - not_null
+
+      - name: target
+        description: "Признак мошенничества (0 - не мошенничество, 1 - мошенничество)"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+                quote: false

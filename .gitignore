@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .venv/
 .env
+
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+dbt/.user.yml

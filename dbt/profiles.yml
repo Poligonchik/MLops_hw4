@@ -1,0 +1,12 @@
+fraud_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      host: localhost
+      port: 8123
+      user: student
+      password: student
+      schema: dbt_fraud
+      secure: false
+      threads: 4
